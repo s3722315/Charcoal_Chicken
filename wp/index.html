@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <!-- meta http-equiv="X-Frame-Options" content="deny" -->
+    <title>My First Webpage</title>
+
+    <!-- We will cover style later. Skip down to the body tag -->
+    <link id='wireframecss' type="text/css" rel="stylesheet" href="wireframe.css"/>
+    <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css" disabled>
+    <script src='wireframe.js'></script>
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- Image sourced from www.rmit.edu.au for educational purposes only -->
+      <div><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Andy Pham
+      </div>
+    </header>
+
+    <nav>
+      Assignments:
+      <!-- link locations: relative to current directory -->
+      <ul>
+        <li><a href="a2/index.php" target="_blank">A2</a></li>
+        <li><a href="a3/index.php" target="_blank">A3</a></li>
+      </ul> |
+      <!-- link locations: relative to e54061's root web directory -->
+      <a href="/~e54061/wp/lectures" target="_blank">Lectures 0 - 11</a> |
+      <a href="/~e54061/secure" target="_blank">Secure Resources Area</a> | 
+      <!-- link location: absolute -->
+      <a href='' target="_blank">WP Public</a>
+    </nav>
+
+    <main>
+      <article id='about-me'>
+        <h2>About me</h2>
+        <p>
+          <img src='../media/avatar.png' width='200' alt='my photo' />
+        </p>
+        <details open>
+          <summary>read more ...</summary>
+            <table id="more-about-me">
+              <tr>
+                <th>Have you any programming or web design experience?</th>
+                <td>I have done Java from first Semester but never done web design.</td>
+              </tr>
+              <tr>
+                <th>Do you see yourself as a programmer or designer, or both?</th>
+                <td>I don't know, I don't think about the future to much.</td>
+              </tr>
+              <tr>
+                <th>What has brought you to this course at RMIT?</th>
+                <td>I came to do this course at RMIT as it was on my Course Map.</td>
+              </tr>
+              <tr>
+                <th>What are you hoping to get out of the course?</th>
+                <td>I hope to get a better understanding on how websites are made, and learn how to design websites.</td>
+              </tr>
+              <tr>
+                <th>Assignments allow for individual or paried work. What strengths do you have and what strengths would you like your assignment partner to have?</th>
+                <td>I'm a fast learner and I work well under preasure. I would like a partner who is good at keeping track of time and good at breaking things down to tasks.</td>
+              </tr>
+              <tr>
+                <th>What websites do you use the most? (NB: "family friendly" !)</th>
+                <td>https://www.roblox.com, http://www.poptropica.com/, https://www.newgrounds.com</td>
+              </tr>
+              <tr>
+                <th>Do you have any interests or hobbies?</th>
+                <td>I like watching anime and playing video games. I sometimes build Gundam when I'm bored.</td>
+              </tr>
+            </table>
+        </details>
+      </article>
+    </main>
+
+    <footer>
+      &copy; Andy Pham
+      <script>
+        document.write(new Date().getFullYear());
+      </script>.
+      Put footer info and other <a href=' '>secondary links</a> here (but only if you wish to). <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
+    </footer>
+    
+  </body>
+</html>

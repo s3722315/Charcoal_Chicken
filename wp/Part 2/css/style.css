@@ -1,0 +1,966 @@
+/*------------header and navigationbar--------- */
+body {
+
+  margin: 0;
+}
+header {
+
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  background-color: white;
+  float: center;
+}
+@media (min-width: 1000px) {
+  header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.logo {
+  height:9vw;
+  width: auto;
+}
+@media (min-width: 1000px) {
+  .logo {
+    height: 90px;
+    width: auto;
+  }
+}
+
+h1 {
+  font-size: 7vw;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#navbar {
+  padding: 0;
+  width: 100%;
+  background-color: #ff8c1a;
+  z-index: 5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+
+  float: center;
+}
+
+#navbar nav {
+  float: left center;
+}
+
+#navbar nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  position: relative;
+}
+
+#navbar nav li:not(.cart-link):not(.login) {
+  display: inline-block;
+  margin-right: 5vw;
+  margin-left: 3vw;
+  padding: 1.25vw 0 1.25vw 0;
+  position: relative;
+}
+@media (min-width: 1000px) {
+  #navbar nav ul li:not(.cart-link):not(.login) {
+    margin-right: 50px;
+    margin-left: 30px;
+    padding: 12.5px 0 12.5px 0;
+  }
+}
+
+#navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2.vw;
+}
+@media (min-width: 1000px) {
+  #navbar nav ul li a {
+    font-size: 23px;
+  }
+}
+
+#navbar nav a:not(.cart-link):not(.login):hover {
+  color: white;
+}
+
+#navbar nav a:not(.cart-link):not(.login):not(.active)::before {
+  content: '';
+  display: block;
+  height: 0%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  transition: all ease-in-out 150ms;
+}
+
+#navbar nav a:not(.cart-link):not(.login):hover::before {
+  height: 0.45vw;
+}
+
+#navbar nav a.active::before {
+  content: '';
+  display: block;
+  height: 0.5vw;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+#navbar nav .cart {
+  width: 2.5vw;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  float: center;
+}
+#navbar nav a.login {
+  margin-left: 23vw;
+  padding: 0.6vw;
+  background: #8c8c8c;
+  color: white;
+  border-radius: 0.6vw;
+}
+#navbar nav a.login:hover {
+  background: #737373;
+}
+#navbar nav a.cart-link {
+  padding: 0.6vw;
+  background: #8c8c8c;
+  color: white;
+  border-radius: 0.6vw;
+}
+#navbar nav a.cart-link:hover {
+  background: #737373;
+}
+@media (min-width: 1000px) {
+  #navbar nav a.active::before {
+    height: 5px;
+  }
+  #navbar nav a:hover::before {
+    height: 5px;
+  }
+  #navbar nav .cart {
+    width:25px;
+    height:auto;
+  }
+  #navbar nav a.login {
+    margin-left: 230px;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  #navbar nav a.cart-link {
+    padding: 6px;
+    border-radius: 6px;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/*-----------------footer-----------------*/
+footer {
+  width: 100%;
+  background-color: #ff8c1a;
+  padding: 1vw 0 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 49vw 49vw;
+  padding: 0;
+}
+.grid-item {
+  padding: 2vw;
+  line-height: 0.2vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: left;
+  color: white;
+}
+footer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vw;
+}
+footer p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2.3vw;
+}
+
+@media (min-width: 1000px) {
+  footer {
+    padding: 10px 0 0 0;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 490px 490px;
+  }
+  .grid-item {
+    padding: 20px;
+    line-height: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  footer h3 {
+    font-size: 25px;
+  }
+  footer p {
+    font-size: 23px;
+    font-weight: 500;
+  }
+}
+
+h5 {
+  color: white;
+  bottom: 0;
+  margin: 0;
+}
+
+
+/*----home body----*/
+.chicken-leg {
+  width: 100%;
+  height: auto;
+}
+.about-img-opacity {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+.about-img {
+  margin: 0;
+  width: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../../../media/chicken-leg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+.about-text {
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.about-text h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  margin: 0;
+  padding-top: 10vw;
+}
+.about-text p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2.5vw;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 10vw;
+}
+@media (min-width: 1000px) {
+  .about-text {
+  }
+  .about-text h3 {
+    font-size: 30px;
+    padding-top: 100px;
+  }
+  .about-text p {
+    font-size: 25px;
+    padding-bottom: 100px;
+  }
+}
+
+/*--------menu body----------*/
+.menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5vw;
+  padding: 2vw 0;
+  text-decoration: underline;
+  color: #4d4d4d;
+}
+.menu-background{
+  background-color: #fff3e6;
+  width: 100%
+}
+.menu-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0.5vw;
+}
+
+.menu-item {
+  position: relative;
+  width: 33vw;
+  height: auto;
+  max-width: 330px;
+}
+.item-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 330px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+  margin-top: 1vw;
+  z-index: 1;
+  border-style: solid;
+  border-width: 0.1vw;
+  border-color: black;
+  border-radius: 0.6vw;
+}
+.item-overlay {
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+.menu-item:hover .item-img {
+  filter: brightness(40%);
+}
+.menu-item:hover .item-overlay {
+  opacity: 1;
+}
+.item-text{
+  color: white;
+}
+h4.item-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+}
+p.item-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2.5vw;
+  padding: 0;
+  margin: 0;
+  line-height: 2.7vw;
+  font-weight: 500;
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    font-size: 50px;
+    padding: 20px 0;
+  }
+  .menu-grid {
+    padding: 5px;
+  }
+  .item-img {
+    margin-top: 10px;
+    border-width: 1px;
+    border-radius: 6px;
+  }
+  h4.item-text {
+    font-size: 30px;
+  }
+  p.item-text {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+
+/*-----------login body------------*/
+.login-box {
+  width: 100%;
+  height: 60vw;
+  background-image: url(../../../media/login-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.login-content {
+  width: 60vw;
+  height: 50vw;
+  background-color: #0d0d0d;
+  padding-top: 10vw;
+  margin: auto;
+  background: rgba(0,0,0,.8);
+
+}
+.login-box label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  margin: 5%;
+  color: white;
+  text-shadow: 2px 2px #4d4d4d;
+}
+.login-box input[type=password] {
+  width: 80%;
+  height: 4vw;
+  margin: 4vw 10%;
+  font-size: 3vw;
+  background: transparent;
+  border: none;
+  border-bottom: 0.3vw solid transparent;
+  outline: none;
+  transition: ease-in-out 150ms;
+  color: white;
+  text-shadow: 2px 2px #4d4d4d;
+}
+.login-box input[type=password]:hover {
+  border-bottom: 0.3vw solid #bfbfbf;
+  transition: ease-in-out 150ms;
+}
+.login-box input[type=password]:focus {
+  border-bottom: 0.3vw solid #bfbfbf;
+  transition: ease-in-out 150ms;
+}
+.login-box input[type=email] {
+  width: 80%;
+  height: 4vw;
+  margin: 4vw 10%;
+  font-size: 3vw;
+  background: transparent;
+  border: none;
+  border-bottom: 0.3vw solid transparent;
+  outline: none;
+  transition: ease-in-out 150ms;
+  color: white;
+  text-shadow: 2px 2px #4d4d4d;
+}
+.login-box ::placeholder {
+  color: #cccccc;
+}
+.login-box input[type=email]:hover {
+  border-bottom: 0.3vw solid #bfbfbf;
+  transition: ease-in-out 150ms;
+}
+.login-box input[type=email]:focus {
+  border-bottom: 0.3vw solid #bfbfbf;
+  transition: ease-in-out 150ms;
+}
+.login-box input[type=submit] {
+  background-color: #e6e6e6;
+  border: none;
+  color: #4d4d4d;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 1vw 2.6vw;
+  font-size: 1.8vw;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 0.6vw;
+  float: right;
+  margin-right: 6vw;
+}
+@media (min-width: 1000px) {
+  .login-box {
+    height: 600px;
+  }
+  .login-content {
+    width: 600px;
+    height: 500px;
+    padding-top: 100px;
+  }
+  .login-box label {
+    font-size: 30px;
+  }
+  .login-box input[type=password] {
+    height: 40px;
+    font-size: 30px;
+    border-bottom: 3px solid transparent;
+    transition: ease-in-out 150ms;
+    margin: 40px 10%;
+  }
+  .login-box input[type=password]:hover {
+    border-bottom: 3px solid #bfbfbf;
+    transition: ease-in-out 150ms;
+  }
+  .login-box input[type=password]:focus {
+    border-bottom: 3px solid #bfbfbf;
+    transition: ease-in-out 150ms;
+    margin: 40px 10%;
+  }
+  .login-box input[type=email] {
+    height: 40px;
+    font-size: 30px;
+    border-bottom: 3px solid transparent;
+    transition: ease-in-out 150ms;
+  }
+  .login-box input[type=email]:hover {
+    border-bottom: 3px solid #bfbfbf;
+    transition: ease-in-out 150ms;
+  }
+  .login-box input[type=email]:focus {
+    border-bottom: 3px solid #bfbfbf;
+    transition: ease-in-out 150ms;
+  }
+  .login-box input[type=submit] {
+    padding: 10px 26px;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-right: 60px;
+  }
+}
+
+/*-------------product page-----------------*/
+.product-page {
+  width: 100%;
+  background-color: #fff3e6;
+  height: 53vw;
+}
+.product-page h3{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5vw;
+  padding: 2vw 0;
+  color: #4d4d4d;
+}
+img.product-img {
+  width: 55vw;
+  height: 37.5vw;
+  object-fit: cover;
+  border-radius: 0.6vw;
+  border-style: solid;
+  border-width: 0.3vw;
+  border-color: #4d4d4d;
+  margin-left: 4vw;
+  padding: 0;
+}
+.product-options {
+  width: 37vw;
+  margin: 0;
+  float: right;
+  margin-right: 1.5vw;
+}
+.size {
+  margin-right: 3vw;
+}
+.quantity {
+  margin-top: 1vw;
+}
+.add-cart {
+  width: 100%;
+  height: 4.5vw;
+}
+.product-options select{
+  background-color: #e6e6e6;
+  color: #4d4d4d;
+  padding: 0.8vw;
+  width:  20vw;
+  outline: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.7vw;
+  font-weight: 500;
+  border-radius: 0.6vw;
+}
+.product-options label {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.9vw;
+  margin-right: 2vw;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product-options input[type=number] {
+  background-color: #e6e6e6;
+  color: #4d4d4d;
+  width:  5vw;
+  outline: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.7vw;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0.6vw;
+}
+.product-options button {
+  background-color: #404040;
+  color: #d9d9d9;
+  width:  5vw;
+  outline: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.7vw;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 0.6vw;
+}
+.product-options input[type=submit] {
+  background-color: #e6e6e6;
+  border: none;
+  color: #4d4d4d;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.6vw 2vw;
+  font-size: 1.6vw;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 0.6vw;
+  float: right;
+  margin-top: 1vw;
+  margin-right: 2.7vw;
+  border-style: solid;
+  border-width: 0.1vw;
+  border-color: #404040;
+}
+.product-options p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2vw;
+  margin: 0;
+  padding: 0;
+}
+
+.text-file a:link {
+  text-decoration: none;
+  color: white;
+}
+.text-file a:visited {
+  text-decoration: none;
+  color: white;
+}
+.text-file a:hover {
+  text-decoration: underline;
+  color: #e6e6e6;
+}
+
+@media (min-width: 1000px) {
+  .product-page {
+    height: 530px;
+  }
+  .product-options {
+    width: 370px;
+    margin-right: 15px;
+  }
+  .size {
+    margin-right: 30px;
+  }
+  .quantity {
+    margin-top: 10px;
+  }
+  .add-cart {
+    height: 45px;
+  }
+  img.product-img {
+    width: 550px;
+    height: 375px;
+    border-radius: 6px;
+    border-width: 3px;
+    margin-left: 40px;
+  }
+  .product-page h3{
+    font-size: 50px;
+    padding: 20px 0;
+  }
+  .product-options select{
+    padding: 8px;
+    width:  200px;
+    font-size: 17px;
+    border-radius: 6px;
+  }
+  .product-options label {
+    font-size: 19px;
+    margin-right: 20px;
+  }
+  .product-options input[type=number] {
+    width:  50px;
+    font-size: 17px;
+    border-radius: 6px;
+  }
+  .product-options button {
+    width:  50px;
+    font-size: 17px;
+    border-radius: 6px;
+  }
+  .product-options input[type=submit] {
+    padding: 6px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-right: 27px;
+    border-width: 1px;
+  }
+  .product-options p {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*-----------------reciept page ------------------------*/
+.all-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.storeInfo {
+  align-content: center;
+}
+.location-info {
+  margin: 0 auto;
+  width: 80%;
+}
+.location-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+.location-info p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 25px;
+  margin: 10px 0;
+}
+.reciept-Grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+}
+.reciept-head {
+  background-color: #AFAFAF;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+.reciept-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+.recieptTotal {
+  text-align: right;
+  padding-right: 10px;
+}
+.Client-info {
+  width: 400px;
+  margin: 0 auto;
+}
+.oneInfo {
+  align-content: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 300px;
+}
+.oneInfo h3 {
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  margin: 15px 0;
+}
+.oneInfo p {
+  text-align: right;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 15px;
+  margin: 15px 0;
+}
+.printButton {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+}
+.printButton input[type=button] {
+  width:  150px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #FFAB5B;
+  margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  margin: 10px auto;
+}
+.printButton form {
+  margin: 10px auto;
+}
+.printButton input[type= submit] {
+  width:  150px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #FFAB5B;
+  margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+/*-------------cart php------------*/
+.cart-object {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 250px auto;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #5A5959;
+  border-width: 2px;
+}
+.cart-object img {
+  width: 200px;
+  height: auto;
+  margin: auto;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #A2A2A2;
+}
+.cart-page {
+  background-color: #fff3e6;
+  width: 100%;
+  padding-top: 10px;
+}
+.cart-page h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.cart-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 27px;
+  margin-bottom: 0;
+
+}
+.cart-info h4 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.cart-page form {
+  margin: 0 auto;
+}
+.cart-page input[type= submit] {
+  width:  150px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #FFAB5B;
+  margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  margin: 0 auto;
+  color: black;
+}
+
+.cart-page button {
+  width:  150px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #FFAB5B;
+  margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  margin: 0 auto;
+  color: black;
+}
+.cart-page a {
+  text-decoration: none;
+  color: black;
+}
+.cart-page a:visited{
+  text-decoration: none;
+  color: black;
+}
+.cart-page a:active{
+  text-decoration: none;
+  color: black;
+}
+.cart-page a::before{
+  text-decoration: none;
+  color: black;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 10px;
+}
+/*--------------checkout ---------------*/
+
+.checkout {
+  background-color: #fff3e6;
+  width: 100%;
+  padding-top: 10px;
+}
+.an-input {
+  display: grid;
+  grid-template-columns: 650px auto;
+  margin: 10px 0;
+}
+.checkout textarea {
+  width: 400px;
+  height: 100px;
+  resize: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 15px;
+  float: right;
+  padding: 1px;
+}
+.checkout input[type= 'text'] {
+  width: 400px;
+  height: 30px;
+  resize: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 15px;
+  float: right;
+}
+.checkout input[type= 'email'] {
+  width: 400px;
+  height: 30px;
+  resize: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 15px;
+  float: right;
+}
+.checkout label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  margin-left: 50px;
+}
+.checkout p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 50px;
+  color: red;
+  margin: 0;
+  margin-left: 10px;
+}
+.checkout input[type= submit] {
+  width:  150px;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #FFAB5B;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-left: 700px;
+  color: black;
+}
